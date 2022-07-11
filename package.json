@@ -10,8 +10,8 @@
     "build:prod": "webpack --config webpack/webpack.production.config.ts",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx} --cache",
     "lint:fix": "eslint src/**/*.{js,jsx,tsx} --cache --fix",
-    "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d build:prod"
   },
   "dependencies": {
     "react": "^18.2.0",

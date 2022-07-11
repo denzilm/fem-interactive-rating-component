@@ -27,6 +27,10 @@ const config: Configuration = {
         }
       },
       {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
         type: 'asset/resource'
       }
@@ -34,7 +38,7 @@ const config: Configuration = {
   },
   resolve: { extensions: ['.tsx', '.ts', '.js'] },
   plugins: [
-    new HtmlWebpackPlugin({ template: 'public/index.html', favicon: 'public/favicon.ico' }),
+    new HtmlWebpackPlugin({ template: 'public/index.html', favicon: 'public/favicon-32x32.png' }),
     new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({ async: false }),
     new ESLintWebpackPlugin({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
