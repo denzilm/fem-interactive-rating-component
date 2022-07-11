@@ -33,14 +33,14 @@ const config: Configuration = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         type: 'asset/resource'
       }
     ]
   },
   resolve: { extensions: ['.tsx', '.ts', '.js'] },
   plugins: [
-    new HtmlWebpackPlugin({ template: 'public/index.html', favicon: 'public/favicon.ico' }),
+    new HtmlWebpackPlugin({ template: 'public/index.html', favicon: 'public/favicon-32x32.png' }),
     new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({ async: false }),
     new ESLintWebpackPlugin({ extensions: ['.js', '.jsx', '.ts', '.tsx'] })

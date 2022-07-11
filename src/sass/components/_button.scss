@@ -1,0 +1,22 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: block;
+    width: 100%;
+    border: none;
+    padding-block: 1rem;
+    background-color: $color-primary;
+    border-radius: 10rem;
+    color: $color-neutral-100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.2s linear;
+  }
+
+  &:hover {
+    background-color: $color-neutral-100;
+    color: $color-primary;
+    cursor: pointer;
+  }
+}

@@ -4,11 +4,14 @@
   "author": "Denzil L. Martin",
   "description": "A solution to Frontend Mentor's Interactive Rating Component Challenge",
   "private": true,
+  "homepage": "https://denzilm.github.io/fem-interactive-rating-component/",
   "scripts": {
     "build:dev": "webpack serve --config webpack/webpack.development.config.ts",
     "build:prod": "webpack --config webpack/webpack.production.config.ts",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx} --cache",
-    "lint:fix": "eslint src/**/*.{js,jsx,tsx} --cache --fix"
+    "lint:fix": "eslint src/**/*.{js,jsx,tsx} --cache --fix",
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -49,6 +52,7 @@
     "eslint-plugin-unicorn": "^42.0.0",
     "eslint-webpack-plugin": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
@@ -136,27 +140,6 @@
         "files": "webpack/**/*.ts",
         "rules": {
           "import/no-extraneous-dependencies": "off"
-        }
-      },
-      {
-        "files": [
-          "tests/**/*.ts"
-        ],
-        "env": {
-          "browser": true,
-          "node": true,
-          "jest": true,
-          "es6": true
-        },
-        "plugins": [
-          "jest",
-          "testing-library"
-        ],
-        "extends": [
-          "plugin:jest/recommended"
-        ],
-        "rules": {
-
         }
       }
     ]
